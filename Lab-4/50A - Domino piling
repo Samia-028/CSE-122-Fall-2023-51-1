@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int M,N,area;
+    cin>>M>>N;
+    area=(M*N)/2;
+    cout<<area<<endl;
+    return 0;
+}
