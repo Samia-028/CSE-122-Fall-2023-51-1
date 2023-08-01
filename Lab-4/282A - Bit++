@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,x=0;
+    char a[4];
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a;
+        if((a[0]=='X'&&a[1]=='+'&&a[2]=='+')||(a[0]=='+'&&a[1]=='+'&&a[2]=='X'))
+                {
+                   x++;
+                }
+        else if((a[0]=='X'&&a[1]=='-'&&a[2]=='-') || (a[0]=='-'&&a[1]=='-'&&a[2]=='X'))
+                {
+                    x--;
+                }
+    }
+    cout<<x;
+    return 0;
+}
