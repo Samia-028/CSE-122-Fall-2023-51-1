@@ -1,0 +1,29 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+using namespace std;
+int main()
+{
+    string w;
+    cin>>w;
+    if(w.size()>100)
+        return 0;
+    int c=0;
+    sort(w.begin(),w.end());
+    for(int i=0;i<w.size();i++)
+    {
+        if(w[i]!=w[i+1])
+        {
+            c++;
+        }
+    }
+    if(c%2==0)
+    {
+        cout<<"CHAT WITH HER!"<<endl;
+    }
+    else
+    {
+        cout<<"IGNORE HIM!"<<endl;
+    }
+    return 0;
+}
