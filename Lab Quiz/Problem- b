@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+class ValueComparer
+{
+public:
+    int compare(int a,int b,int c)
+    {
+        int max_val=a;
+        if(b> max_val)
+        {
+            max_val=b;
+        }
+        if(c> max_val)
+        {
+            max_val=c;
+        }
+        return max_val;
+    }
+    char compare(char a,char b,char c)
+    {
+        char max_val=a;
+        if(b> max_val)
+        {
+            max_val=b;
+        }
+        if(c> max_val)
+        {
+            max_val=c;
+        }
+        return max_val;
+    }
+    float compare(float a,float b,float c)
+    {
+        float max_val=a;
+        if(b> max_val)
+        {
+            max_val=b;
+        }
+        if(c> max_val)
+        {
+            max_val=c;
+        }
+        return max_val;
+    }
+};
+int main()
+{
+    ValueComparer comparer;
+    int int_result=comparer.compare(5,10,15);
+    cout<<"Max integer value:"<<int_result<<endl;
+    char char_result=comparer.compare('A','S','Z');
+    cout<<"Max character value:"<<char_result<<endl;
+    float float_result=comparer.compare(1.5f,2.8f,3.14f);
+    cout<<"Max float value:"<<float_result<<endl;
+
+    return 0;
+}
